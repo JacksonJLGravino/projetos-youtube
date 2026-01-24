@@ -1,89 +1,95 @@
-const play = document.querySelector('.play')
-const contador = document.querySelector('.contador')
-const vermelho = document.querySelector('.vermelho')
-const verde = document.querySelector('.verde')
-const azul = document.querySelector('.azul')
-const amarelo = document.querySelector('.amarelo')
+const buttons = ["green", "red", "yellow", "blue"];
 
-let jogar = false
-let ordem = []
-let ordemClicada = []
-let score = 0
+const sounds = {
+  green: new Audio("sounds/green.mp3"),
+  red: new Audio("sounds/red.mp3"),
+  yellow: new Audio("sounds/yellow.mp3"),
+  blue: new Audio("sounds/blue.mp3"),
+};
 
-function start() {
-  play.innerHTML = 'Restart'
-  score = 0
-  adicionarUm()
+let gameSequence = [];
+let userSequence = [];
+let level = 0;
+let canClick = false;
+
+const levelText = document.getElementById("level");
+const messageText = document.getElementById("message");
+const startButton = document.getElementById("start");
+
+startButton.addEventListener("click", startGame);
+
+buttons.forEach((color) => {
+  document
+    .getElementById(color)
+    .addEventListener("click", () => handleUserClick(color));
+});
+
+function startGame() {
+  gameSequence = [];
+  level = 0;
+  messageText.textContent = "";
+  nextRound();
 }
 
-function apertar(cor) {
-  if (jogar) {
-    ordemClicada.push(cor)
-    let elementColor = createColorElement(cor)
-    elementColor.style.opacity = 1
-    setTimeout(() => {
-      elementColor.style.opacity = 0.5
-    }, 500)
-    checarOrdem()
-  }
+function nextRound() {
+  level++;
+  levelText.textContent = level;
+  userSequence = [];
+  canClick = false;
+
+  const randomColor = buttons[Math.floor(Math.random() * buttons.length)];
+  gameSequence.push(randomColor);
+
+  playSequence();
 }
 
-function checarOrdem() {
-  for (let i in ordemClicada) {
-    if (ordemClicada[i] != ordem[i]) {
-      alert('você errou 😭 ' + ` sua pontuação foi de ${score}`)
-      jogar = false
-      play.innerHTML = 'Play'
-      score = 0
-      contador.innerHTML = score
-      return
+function playSequence() {
+  let i = 0;
+
+  const interval = setInterval(() => {
+    activateButton(gameSequence[i]);
+    i++;
+
+    if (i >= gameSequence.length) {
+      clearInterval(interval);
+      canClick = true;
     }
-  }
-  if (ordemClicada.length === ordem.length) {
-    score++
-    contador.innerHTML = score
-    adicionarUm()
-  }
+  }, 800);
 }
 
-function adicionarUm() {
-  let colorOrder = Math.floor(Math.random() * 4)
-  ordem.push(colorOrder)
-  let i = 0
-  jogar = false
-  ordemClicada = []
+function activateButton(color) {
+  const button = document.getElementById(color);
 
-  const shuffleOrder = setInterval(() => {
-    corOriginal()
-    if (i === ordem.length) {
-      clearInterval(shuffleOrder)
-      jogar = true
-      return
-    } else {
-      let elementColor = createColorElement(ordem[i])
-      elementColor.style.opacity = 1
-      i++
-    }
-  }, 1000)
+  button.classList.add("active");
 
-  corOriginal()
+  sounds[color].currentTime = 0;
+  sounds[color].play();
+
+  setTimeout(() => {
+    button.classList.remove("active");
+  }, 400);
 }
 
-function createColorElement(color) {
-  if (color == 0) {
-    return vermelho
-  } else if (color == 1) {
-    return verde
-  } else if (color == 2) {
-    return azul
-  } else if (color == 3) {
-    return amarelo
+function handleUserClick(color) {
+  if (!canClick) return;
+
+  userSequence.push(color);
+  activateButton(color);
+
+  const index = userSequence.length - 1;
+
+  if (userSequence[index] !== gameSequence[index]) {
+    gameOver();
+    return;
+  }
+
+  if (userSequence.length === gameSequence.length) {
+    setTimeout(nextRound, 1000);
   }
 }
 
-function corOriginal() {
-  vermelho.style.opacity = 0.4
-  verde.style.opacity = 0.4
-  azul.style.opacity = 0.4
-  amarelo.style.opacity = 0.4
+function gameOver() {
+  messageText.textContent =
+    "Game Over! Clique em iniciar para tentar novamente.";
+  canClick = false;
 }

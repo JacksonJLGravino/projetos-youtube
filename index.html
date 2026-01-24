@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -7,16 +7,21 @@
     <title>Genius</title>
   </head>
   <body>
-    <div class="table">
-      <div class="teclas">
-        <div class="tecla vermelho" onclick="apertar(0)"></div>
-        <div class="tecla verde" onclick="apertar(1)"></div>
-        <div class="tecla azul" onclick="apertar(2)"></div>
-        <div class="tecla amarelo" onclick="apertar(3)"></div>
+    <main class="container">
+      <h1>Genius</h1>
+
+      <p class="level">Nível: <span id="level">0</span></p>
+
+      <div class="game">
+        <div class="btn green" id="green"></div>
+        <div class="btn red" id="red"></div>
+        <div class="btn yellow" id="yellow"></div>
+        <div class="btn blue" id="blue"></div>
       </div>
-      <div class="play" onclick="start()">Play</div>
-    </div>
-    <div class="contador">0</div>
-    <script src="./script.js"></script>
+
+      <button id="start">Iniciar Jogo</button>
+      <p id="message"></p>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

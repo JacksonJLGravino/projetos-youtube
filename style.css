@@ -1,89 +1,68 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-body{
-  background: #1E1E1E;
+body {
+  background: #111;
+  color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  flex-direction: column;
 }
 
-.table{
-  width: 500px;
-  height: 500px;
-  background: #2E2C2C;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
+  text-align: center;
 }
 
-.teclas{
-  height: 100%;
-  width: 100%;
+.game {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  position: absolute;
-}
-
-.tecla{
-  height: 200px;
-  width: 200px;
-  background: white;
-  margin-inline: auto;
-  z-index: 0;
-}
-
-.vermelho{
-  background: rgb(255, 50, 50);
-  border-top-left-radius: 100%;
-  opacity: 0.4;
-}
-
-.verde{
-  background: rgb(50, 128, 50);
-  border-top-right-radius: 100%;
-  opacity: 0.4;
-}
-
-.azul{
-  background: rgb(50, 50, 255);
-  border-bottom-left-radius: 100%;
-  opacity: 0.4;
-}
-
-.amarelo{
-  background: rgb(251, 251, 50);
-  border-bottom-right-radius: 100%;
-  opacity: 0.4;
-}
-
-.play{
-  position: relative;
-  width: 275px;
-  height: 275px;
-  border: 25px solid #2E2C2C;
-  background: wheat;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 48px;
+  grid-template-columns: repeat(2, 150px);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.green {
+  background: #00a74a;
+}
+
+.red {
+  background: #9f0f17;
+}
+
+.yellow {
+  background: #cca707;
+}
+
+.blue {
+  background: #094a8f;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-.contador{
-  color: white;
-  margin-top: 48px;
-  font-weight: 600;
-  font-size: 48px;
+#message {
+  margin-top: 10px;
+  font-weight: bold;
 }
