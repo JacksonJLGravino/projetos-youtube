@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Griffy", cursive;
+}
+
+body {
+  background: #292c35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+h1,
+h3 {
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+#resultado {
+  height: 30px;
+  font-size: 22px;
+}
+
+.opcao {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.opcao img {
+  width: 100px;
+  opacity: 0.3;
+}
+
+.opcao-jogador {
+  cursor: pointer;
+}
+
+.opcao-jogador img {
+  transition: 0.2s;
+}
+
+.opcao-jogador img:hover {
+  width: 110px;
+  transition: 0.5s;
+}
