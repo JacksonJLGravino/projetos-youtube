@@ -1,0 +1,35 @@
+.content {
+  background: #daf0ff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculadora {
+  background: #17181a;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.calculadoraHeader {
+  padding-block: 32px;
+  text-align: right;
+  height: 146px;
+}
+
+.equacao{
+  color: #818181;
+  font-size: 24px;
+}
+
+.solucao{
+  color: #FFFFFF;
+  font-size: 48px;
+}
+
+.linhas {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 22px;
+}
