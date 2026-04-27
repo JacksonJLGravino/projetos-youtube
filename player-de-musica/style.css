@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main{
+  height: 100vh;
+  background: #F0F0F0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  width: 320px;
+  background: #F0F0F0;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+h3{
+  color: #121212;
+  text-align: center;
+  font-size: 24px;
+}
+
+p{
+  color: #262626;
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.volume{
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume i{
+  color: #262626;
+  font-size: 20px;
+}
+
+.player{
+  margin-block: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.player button i{
+  color: #262626;
+  font-size: 24px;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: #121212;
+  border-radius: 4px;
+}
+
+.progress{
+  height: 8px;
+  background-color: #505050;
+  border-radius: 4px;
+}
+
+.musicTime{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.musicTime span{
+  color: #262626;
+  opacity: 0.7;
+  font-size: 12px;
+}
