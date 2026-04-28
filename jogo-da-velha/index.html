@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <h1>Jogo da Velha</h1>
+
+    <form class="game" name="game">
+      <div class="players">
+        <div class="gamer">
+          Jogador 1:
+          <input type="text" value="Jogador 1" name="X" />
+          - X
+        </div>
+        <div class="gamer">
+          Jogador 2:
+          <input type="text" value="Jogador 2" name="O" />
+          - O
+        </div>
+      </div>
+      <input type="button" name="opt" onClick="process(0)" />
+      <input id="opt1" type="button" name="opt" onClick="process(1)" />
+      <input type="button" name="opt" onClick="process(2)" />
+      <input id="opt3" type="button" name="opt" onClick="process(3)" />
+      <input id="opt4" type="button" name="opt" onClick="process(4)" />
+      <input id="opt5" type="button" name="opt" onClick="process(5)" />
+      <input type="button" name="opt" onClick="process(6)" />
+      <input id="opt7" type="button" name="opt" onClick="process(7)" />
+      <input type="button" name="opt" onClick="process(8)" />
+      <div>
+        <button class="btn" onclick="restart()">COMEÇAR DENOVO</button>
+      </div>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
