@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Meu Portifólio</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Jackson Gravino</div>
+
+        <button class="menu-toggle" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navMenu">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-photo-container">
+                    <img src="https://github.com/jacksonjlgravino.png" alt="Foto de Perfil de Jackson Gravino"
+                        class="profile-photo">
+                </div>
+
+                <div class="hero-text">
+                    <h1>Olá, eu sou Jackson Gravino</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#projetos" class="cta-button">Ver Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="content-section">
+            <h2>Sobre Mim</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae rem praesentium obcaecati
+                consequatur beatae saepe laudantium delectus magnam, illo impedit voluptatem soluta perferendis,
+                pariatur eveniet tempore, nisi dolores odio.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi libero doloremque nisi mollitia minus
+                tempora cumque quisquam iusto vel. Perferendis exercitationem animi fuga velit! Cupiditate iusto tenetur
+                nesciunt blanditiis quaerat?</p>
+        </section>
+
+        <section id="habilidades" class="content-section">
+            <h2>Minhas Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Linguagens & Front-end</h3>
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Linguagens & Front-end</h3>
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Linguagens & Front-end</h3>
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="content-section">
+            <h2>Meus Projetos
+                <span id="totalReposCount" class="repo-count-badge">15</span>
+            </h2>
+
+            <div id="projectsContainer" class="project-grid">
+                <p id="loading-message">Carregando projetos do GitHub...</p>
+            </div>
+
+            <button id="expandProjectsBtn" class="cta-button action-button">
+                Ver mais projetos
+            </button>
+
+            <p class="github-link-info">
+                <a href="https://github.com/jacksonjlgraivno" target="_blank">
+                    <i class="fab fa-github"></i> Acessar perfil completo no GitHub
+                </a>
+            </p>
+        </section>
+
+        <section id="contato" class="content-section">
+            <h2>Entre em contato</h2>
+            <p>Email: jacksonjlgravino@gmail.com</p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/jackson-gravino" target="_blank">Jackson Gravino</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Meu Portólio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
