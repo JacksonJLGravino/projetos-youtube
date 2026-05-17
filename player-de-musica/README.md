@@ -8,6 +8,12 @@ player de música simples com o nome da música, o nome da banda, um controlador
 - CSS
 - JavaScript
 
+## 📂 Passo a Passo
+
+Acompanhe o passo a passo nesse link do youtube.
+
+[Jackson Gravino Dev](https://www.youtube.com/watch?v=XOAHeKy7wY4)
+
 ---
 
 <img src="page.jpg" />

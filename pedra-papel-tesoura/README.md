@@ -4,12 +4,14 @@ Jogo de pedra, papel e tesoura
 
 <img src="capa.jpg" />
 
-___
-
 ## Tecnologias 💻
 
 - HTML
 - CSS
 - JAVASCRIPT
 
-___
+## 📂 Passo a Passo
+
+Acompanhe o passo a passo nesse link do youtube.
+
+[Jackson Gravino Dev](https://www.youtube.com/watch?v=FVakw8_M1B4)

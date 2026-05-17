@@ -10,12 +10,10 @@ O projeto foi construído com:
 - CSS
 - JavaScript
 
----
-
-<img src="project.png" />
-
 ## 📂 Passo a Passo
 
 Acompanhe o passo a passo nesse link do youtube.
 
 [Jackson Gravino Dev](https://youtu.be/ffY1y52itqo)
+
+<img src="project.png" />

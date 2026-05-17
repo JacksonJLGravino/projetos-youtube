@@ -16,10 +16,8 @@ Um clone do clássico jogo da Cobrinha (Snake) desenvolvido para a web usando ap
 - **CSS3**: Para estilização e layout da página.
 - **JavaScript (ES6)**: Para a lógica do jogo (movimento, detecção de colisão, pontuação).
 
-### Acompanhe no YouTube
+## 📂 Passo a Passo
 
-https://youtu.be/KdfaCw4f38M?si=ehrv5lMZsdqor8GU
+Acompanhe o passo a passo nesse link do youtube.
 
-### 📄 Licença
-
-Este projeto está sob a licença MIT.
+[Jackson Gravino Dev](https://www.youtube.com/watch?v=KdfaCw4f38M)

@@ -15,6 +15,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 
-### Demonstração
+## 📂 Passo a Passo
 
-[Vídeo passo a passo](https://youtu.be/rzetokLvRV4)
+Acompanhe o passo a passo nesse link do youtube.
+
+[Jackson Gravino Dev](https://www.youtube.com/watch?v=rzetokLvRV4)
